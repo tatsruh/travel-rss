@@ -1,0 +1,98 @@
+:root {
+  font-size: 1.25em; /* 20px */
+}
+* {
+  text-decoration: none;
+  scroll-behavior: smooth;
+  overflow: hidden;
+  margin: 0%;
+}
+@font-face {
+  font-family: "Magra regular";
+  src: url("./font/Magra-Regular.ttf");
+}
+@font-face {
+  font-family: "Magra bold";
+  src: url("./font/Magra-Bold.ttf");
+}
+@font-face {
+  font-family: "red hat";
+  src: url("./font/RedHatText-VariableFont_wght.ttf");
+}
+.magra {
+  font-family: "Magra regular";
+  font-weight: 600;
+}
+.redhat {
+  font-family: "red hat";
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+body {
+  font-style: normal;
+  line-height: normal;
+  color: #fff;
+  background-color: #fff;
+}
+.container {
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: auto;
+}
+.bc-pic {
+  background-image: url(./images/background-mnt.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  height: 765px;
+}
+.header {
+  height: 90px;
+  background: rgba(242, 120, 92, 0.7);
+  box-shadow: 0px 4px 4px 0px rgba(13, 96, 111, 0.5);
+}
+.header_flex {
+  height: 90px;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_flex p {
+  font-size: 1.6rem;
+  margin-left: 0.5rem;
+  letter-spacing: 0.7px;
+}
+.header_flex p::before {
+  margin-right: 0.3rem;
+  content: url(./images/Vector.svg);
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.header_nav {
+  padding-inline-start: 0;
+}
+.header_nav li {
+  margin-right: 2.1rem;
+  letter-spacing: 0.3px;
+  font-size: 0.8rem;
+}
+.header_nav li:last-child {
+  position: relative;
+  left: 0.25rem;
+}
+.header_flex button {
+  display: block;
+  color: white;
+  font-family: "red hat";
+  font-size: 0.8rem;
+  width: 5.1rem;
+  height: 2.1rem;
+  border-radius: 10px;
+  border: 0;
+  background: #0d606f;
+  margin-right: 0.5rem;
+  box-shadow: 0px 2px 3px 0px rgba(13, 96, 111, 0.16),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
