@@ -1,11 +1,35 @@
 :root {
   font-size: 1.25em; /* 20px */
 }
+
 * {
   text-decoration: none;
   scroll-behavior: smooth;
-  overflow: hidden;
+
   margin: 0%;
+  cursor: context-menu;
+}
+a:hover,
+li:hover,
+button:hover,
+input:hover {
+  cursor: pointer;
+}
+button {
+  border-radius: 10px;
+  background: #0d606f;
+  box-shadow: 0px 2px 3px 0px rgba(13, 96, 111, 0.16),
+    0px 0px 3px 0px rgba(13, 96, 111, 0.08);
+  color: white;
+  font-family: "red hat";
+  font-size: 0.8rem;
+  border: 0;
+}
+li:hover {
+  text-shadow: 4px 5px 7px rgba(13, 96, 111, 0.8);
+}
+li {
+  list-style: none;
 }
 @font-face {
   font-family: "Magra regular";
@@ -19,12 +43,27 @@
   font-family: "red hat";
   src: url("./font/RedHatText-VariableFont_wght.ttf");
 }
+@font-face {
+  font-family: "Aleo regular";
+  src: url("./font/Aleo-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Aleo italic";
+  src: url("./font/Aleo-Italic-VariableFont_wght.ttf");
+}
 .magra {
   font-family: "Magra regular";
   font-weight: 600;
 }
 .redhat {
   font-family: "red hat";
+}
+
+.unselectable {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 .flex {
   display: flex;
@@ -35,6 +74,8 @@ body {
   line-height: normal;
   color: #fff;
   background-color: #fff;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 .container {
   max-width: 1220px;
@@ -47,6 +88,42 @@ body {
   background-position: top;
   background-size: cover;
   height: 765px;
+}
+.bc-pic_2 {
+  height: 1270px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bc-pic_2::before {
+  content: "";
+  background-image: url(./images/Rectangle\ 27.jpg);
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.7;
+}
+h1 {
+  font-family: "Aleo regular";
+  font-size: 4rem;
+  font-weight: 700;
+  padding-top: 1.6rem;
+  margin-bottom: 1.5rem;
+
+  letter-spacing: -1px;
+}
+h2 {
+  color: #f2785c;
+  font-family: "red hat";
+  font-size: 2rem;
+  font-weight: 500;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
 }
 .header {
   height: 90px;
@@ -84,15 +161,184 @@ body {
 }
 .header_flex button {
   display: block;
-  color: white;
-  font-family: "red hat";
-  font-size: 0.8rem;
   width: 5.1rem;
   height: 2.1rem;
-  border-radius: 10px;
   border: 0;
-  background: #0d606f;
   margin-right: 0.5rem;
-  box-shadow: 0px 2px 3px 0px rgba(13, 96, 111, 0.16),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.wrapper {
+  box-sizing: border-box;
+  max-width: 42.6rem;
+  height: 4.75rem;
+  position: relative;
+}
+.wrapper input {
+  padding-left: 2rem;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: "Aleo italic";
+  color: #f2785c;
+  outline: none;
+  font-size: 1.2rem;
+}
+.wrapper input::placeholder {
+  margin-left: 2rem;
+  font-family: "Aleo italic";
+  color: #f2785c;
+  font-size: 1.2rem;
+}
+
+.wrapper button {
+  font-size: 1.2rem;
+  position: absolute;
+  right: -1rem;
+  top: 0.85rem;
+  width: 11.5rem;
+  height: 3rem;
+}
+
+.welcome {
+  padding-left: 1rem;
+  padding-right: 0;
+  height: 33.75rem;
+}
+.welcome p {
+  font-size: 20px;
+  font-family: "Aleo italic";
+  margin-bottom: 2.2rem;
+}
+
+.steps {
+  height: 17.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.preferences {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100vw;
+}
+.preferences p {
+  color: #0d606f;
+  font-family: "Aleo regular";
+  font-size: 1rem;
+  margin-top: 1.2rem;
+}
+.preferences div {
+  text-align: center;
+}
+.preferences div:first-child {
+  padding-left: 2.5rem;
+}
+.preferences div:nth-child(2) {
+  padding-left: 3.5rem;
+}
+.preferences div:last-child {
+  padding-right: 3rem;
+}
+
+.destinations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.destination_cards_container {
+  margin-top: 0.3rem;
+  margin-bottom: 0.2rem;
+  max-width: fit-content;
+  height: 40rem;
+  max-width: 100vw;
+  position: relative;
+}
+.destination_cards {
+  position: absolute;
+  left: -27rem;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  height: 40rem;
+  max-width: 100vw;
+}
+.destination {
+  flex-shrink: 0;
+  width: 40rem;
+  height: 40rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: start;
+}
+.destination span {
+  font-family: "red hat";
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  margin-left: 0.8rem;
+}
+.destination:first-child {
+  background-image: url(./images/sea.png);
+}
+.destination:nth-child(2) {
+  background-image: url(./images/japan.png);
+}
+.destination:last-child {
+  background-image: url(./images/america.png);
+}
+.test {
+  overflow: hidden;
+  width: 100vw;
+}
+.round_button {
+  margin-right: 0.5rem;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(242, 120, 92, 0.5);
+  border-radius: 50%;
+}
+.round_button.active {
+  background-color: #f2785c;
+}
+.round_buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.2rem;
+  margin-bottom: 2rem;
+  margin-left: 0.3rem;
+}
+.destination_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  width: 11.5rem;
+  height: 3rem;
+}
+.destination_button span {
+  margin-left: 0.6rem;
+}
+.stories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.card_wrapper {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.card_wrapper img {
+  border-radius: 16px;
+  box-shadow: 0px 4px 4px 0px #0d606f;
+  width: 20rem;
+  border: 0;
 }
