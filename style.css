@@ -17,6 +17,13 @@ span:hover,
 img:hover {
   cursor: pointer;
 }
+button:hover {
+  background-color: #063038;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
 button {
   border-radius: 10px;
   background: #0d606f;
@@ -411,4 +418,65 @@ h3 {
   flex-direction: row;
   justify-content: end;
   min-width: 33%;
+}
+
+/* mobile */
+
+@media (max-width: 767px) {
+  :root {
+    font-size: 0.625em; /* 10px */
+  }
+  button {
+    font-size: 1.1rem;
+  }
+  .container {
+    max-width: 360px;
+    padding: 0 1rem;
+  }
+  .bc-pic {
+    height: 250px;
+  }
+
+  .bc-pic_2 {
+    height: 693px;
+  }
+  .bc-pic_1 {
+    height: 628px;
+  }
+  h1 {
+    display: none;
+  }
+  h2 {
+    font-size: 1.4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+  .header {
+    background: transparent;
+    box-shadow: none;
+    height: 75px;
+  }
+  .header_flex {
+    height: 75px;
+  }
+  .header_flex p {
+    display: none;
+  }
+  .header_flex ul::before {
+    margin-right: 0.3rem;
+    content: url(./images/Vector.svg);
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .header_flex li {
+    display: none;
+  }
+  .header_flex button {
+    display: none;
+  }
+  .header_flex ul::after {
+  }
 }
