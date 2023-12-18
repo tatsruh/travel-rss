@@ -100,7 +100,7 @@ body {
 }
 
 .bc-pic_2 {
-  height: 1270px;
+  height: 63.5rem;
   position: relative;
   left: 0;
   bottom: 0;
@@ -114,7 +114,7 @@ body {
   background-repeat: repeat;
 }
 .bc-pic_1 {
-  height: 1330px;
+  height: 66.5rem;
   position: relative;
   width: 100%;
   display: flex;
@@ -163,12 +163,6 @@ h3 {
   margin-left: 0.5rem;
   letter-spacing: 0.7px;
 }
-/* .header_flex p::before {
-  margin-right: 0.3rem;
-  content: url(./images/Vector.svg);
-  width: 1.5rem;
-  height: 1.5rem;
-} */
 
 .header_nav {
   padding-inline-start: 0;
@@ -276,10 +270,10 @@ h3 {
   max-width: fit-content;
   height: 40rem;
   max-width: 100vw;
-  position: relative;
+  /* position: relative; */
 }
 .destination_cards {
-  position: absolute;
+  position: relative;
   left: -27rem;
   /* left: -33%; */
   top: 0;
@@ -352,6 +346,9 @@ h3 {
 }
 .destination_button_last {
   margin-top: 2rem;
+}
+.arrow {
+  display: none;
 }
 .stories {
   display: flex;
@@ -429,7 +426,7 @@ h3 {
 }
 /* mobile */
 
-@media (max-width: 767px) {
+@media (max-width: 899px) {
   :root {
     font-size: 0.625em; /* 10px */
   }
@@ -441,26 +438,21 @@ h3 {
   }
   .container {
     max-width: 36rem;
-    padding: 0 1rem;
+    padding: 0;
     box-sizing: border-box;
   }
   .bc-pic {
     height: 250px;
   }
 
-  .bc-pic_2 {
-    height: 693px;
-  }
-  .bc-pic_1 {
-    height: 628px;
-  }
   h1 {
     display: none;
   }
   h2 {
     font-size: 1.4rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    margin: 2rem 0;
+    padding: 0;
+    padding-top: 0.5rem;
   }
   h3 {
     font-size: 1.1rem;
@@ -469,6 +461,9 @@ h3 {
     background: transparent;
     box-shadow: none;
     height: 75px;
+    padding-top: 2rem;
+    padding-left: 0;
+    padding-right: 0.5rem;
   }
   .header_flex {
     height: 75px;
@@ -521,7 +516,7 @@ h3 {
   .wrapper {
     max-width: 36rem;
     height: 4.8rem;
-    margin-top: 7rem;
+    margin-top: 5rem;
   }
   .wrapper input {
     max-width: 36rem;
@@ -540,5 +535,235 @@ h3 {
     top: 0.9rem;
     width: 9.2rem;
     height: 3rem;
+  }
+  .welcome {
+    height: 10rem;
+  }
+
+  .steps {
+    height: 20rem;
+  }
+
+  .preferences p {
+    margin-top: 2rem;
+  }
+  .preferences div:first-child p {
+    text-align: start;
+    max-width: 10rem;
+  }
+  .preferences div:first-child {
+    padding-left: 0rem;
+  }
+  .preferences div:nth-child(2) p {
+    padding-left: 0rem;
+    max-width: 12rem;
+  }
+  .preferences div:nth-child(2) {
+    padding-left: 0rem;
+  }
+  .preferences div:last-child {
+    padding-right: 0rem;
+    max-width: 10rem;
+    text-align: end;
+  }
+  .img {
+    width: 7rem;
+    height: 7rem;
+    margin-left: -2rem;
+  }
+
+  .img2 {
+    margin-left: 0rem;
+  }
+
+  .destination_cards_container {
+    height: 21rem;
+    position: relative;
+  }
+  .destination_cards {
+    position: absolute;
+    left: 0;
+    /* left: -33%; */
+    margin-left: 1.5rem;
+    gap: 2rem;
+    height: 21em;
+    max-width: 100vw;
+  }
+  .destinations h2 {
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .destination {
+    flex-shrink: 0;
+    max-width: 36rem;
+    height: 21rem;
+    border-radius: 16px;
+    background-size: cover;
+    justify-content: flex-start;
+  }
+  .destination span {
+    font-family: "red hat";
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 0rem;
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+  }
+  .destination:first-child {
+    background-image: url(./images/spane-mobile.jpg);
+  }
+  .destination:nth-child(2) {
+    background-image: url(./images/japan-mobile.png);
+  }
+  .destination:last-child {
+    background-image: url(./images/usa-mobile.jpg);
+  }
+
+  .round_button {
+    margin-right: 0.5rem;
+    width: 8px;
+    height: 8px;
+    background-color: rgba(242, 120, 92, 0.5);
+    border-radius: 50%;
+  }
+  .round_button.active {
+    background-color: #f2785c;
+  }
+  .round_buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.2rem;
+    margin-bottom: 2rem;
+    margin-left: 0.3rem;
+    position: absolute;
+    top: 660px;
+  }
+  .arrow {
+    display: block;
+  }
+  .arrow-left {
+    position: absolute;
+    top: 570px;
+    left: 20px;
+  }
+  .arrow-right {
+    position: absolute;
+    top: 570px;
+    right: 20px;
+  }
+  .destination_button {
+    font-size: 1.1rem;
+    width: 9.2rem;
+    height: 3rem;
+    margin: 0.2rem auto;
+    margin-top: 0.5rem;
+  }
+  .destination_button img {
+    width: 1rem;
+  }
+  .destination_button span {
+    margin-left: 0.6rem;
+  }
+  .destination_button_last {
+    margin-top: -1rem;
+  }
+  .card_container {
+    margin-top: 1rem;
+  }
+
+  .card_wrapper img {
+    width: 15.5rem;
+    height: 13rem;
+    border: 0;
+    margin-right: 1rem;
+  }
+  .card_wrapper p,
+  .card_wrapper span {
+    font-size: 0.9rem;
+  }
+  .card_wrapper p {
+    font-weight: 400;
+    margin-top: 1.2rem;
+    height: 10rem;
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+    text-overflow: ellipsis; /* Добавляем многоточие */
+    padding-bottom: 5px;
+    margin-top: 0;
+  }
+  .footer_wrapper {
+    margin-top: 3rem;
+    justify-content: center;
+  }
+  .footer_wrapper span {
+    display: none;
+  }
+  .media a {
+    margin-left: 1rem;
+  }
+  .media {
+    gap: 1rem;
+    margin-left: 1rem;
+  }
+  .media_icon {
+    width: 3.3rem;
+  }
+
+  .bc-pic_2 {
+    height: 63rem;
+  }
+  .bc-pic_1 {
+    height: 69rem;
+  }
+  .stories h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 3000px) and (min-width: 2300px) {
+  .destination_cards {
+    left: 0;
+  }
+}
+@media screen and (max-width: 2299px) and (min-width: 2000px) {
+  .destination_cards {
+    left: -8rem;
+  }
+}
+@media screen and (max-width: 1999px) and (min-width: 1700px) {
+  .destination_cards {
+    left: -15rem;
+  }
+}
+@media screen and (max-width: 1399px) and (min-width: 1200px) {
+  .destination_cards {
+    left: -28rem;
+  }
+}
+@media screen and (max-width: 1199px) and (min-width: 950px) {
+  .destination_cards {
+    left: -20rem;
+  }
+  .destination {
+    flex-shrink: 0;
+    width: 30rem;
+    height: 30rem;
+    background-size: cover;
+  }
+  .destination_cards_container {
+    height: 30rem;
+  }
+}
+@media screen and (max-width: 949px) and (min-width: 900px) {
+  .destination_cards {
+    left: -25rem;
+  }
+  .destination {
+    flex-shrink: 0;
+    width: 30rem;
+    height: 30rem;
+    background-size: cover;
+  }
+  .destination_cards_container {
+    height: 30rem;
   }
 }
