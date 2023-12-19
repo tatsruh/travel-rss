@@ -457,6 +457,7 @@ h3 {
   h3 {
     font-size: 1.1rem;
   }
+
   .header {
     background: transparent;
     box-shadow: none;
@@ -766,4 +767,10 @@ h3 {
   .destination_cards_container {
     height: 30rem;
   }
+}
+.none {
+  display: none;
+}
+.block {
+  display: block;
 }
