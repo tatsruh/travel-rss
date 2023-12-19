@@ -424,6 +424,39 @@ h3 {
 .none-li {
   display: none;
 }
+@keyframes move-right {
+  from {
+    left: 3rem;
+  }
+  to {
+    left: -55rem;
+  }
+}
+.transitionright {
+  animation-name: move-right;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes move-left {
+  from {
+    left: -55rem;
+  }
+  to {
+    left: 3rem;
+  }
+}
+.transitionleft {
+  animation-name: move-left;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+.right {
+  left: -55rem;
+}
+.left {
+  left: 3rem;
+}
+
 /* mobile */
 
 @media (max-width: 899px) {
@@ -657,7 +690,7 @@ h3 {
     width: 9.2rem;
     height: 3rem;
     margin: 0.2rem auto;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
   .destination_button img {
     width: 1rem;
@@ -665,9 +698,7 @@ h3 {
   .destination_button span {
     margin-left: 0.6rem;
   }
-  .destination_button_last {
-    margin-top: -1rem;
-  }
+
   .card_container {
     margin-top: 1rem;
   }
@@ -719,6 +750,25 @@ h3 {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
   }
+  .right {
+    left: -80rem;
+  }
+  @keyframes move-right {
+    from {
+      left: 3rem;
+    }
+    to {
+      left: -80rem;
+    }
+  }
+  @keyframes move-left {
+    from {
+      left: -80rem;
+    }
+    to {
+      left: 3rem;
+    }
+  }
 }
 @media screen and (max-width: 3000px) and (min-width: 2300px) {
   .destination_cards {
@@ -753,6 +803,12 @@ h3 {
   .destination_cards_container {
     height: 30rem;
   }
+  .bc-pic_2 {
+    height: 70rem;
+  }
+  .bc-pic_1 {
+    height: 75rem;
+  }
 }
 @media screen and (max-width: 949px) and (min-width: 900px) {
   .destination_cards {
@@ -767,10 +823,19 @@ h3 {
   .destination_cards_container {
     height: 30rem;
   }
+  .bc-pic_2 {
+    height: 93rem;
+  }
+  .bc-pic_1 {
+    height: 98rem;
+  }
 }
 .none {
   display: none;
 }
 .block {
   display: block;
+}
+.destination_cards div {
+  cursor: pointer;
 }
